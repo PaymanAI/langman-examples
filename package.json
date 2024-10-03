@@ -3,10 +3,13 @@
   "module": "src",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/main.ts"
+    "dev": "bun run --watch src/main.ts",
+    "lint": "biome check .",
+    "lint:fix": "biome check --fix ."
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@biomejs/biome": "1.9.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

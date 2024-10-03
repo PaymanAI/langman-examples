@@ -1,0 +1,131 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+  "files": {
+    "ignore": ["dist"],
+    "include": ["*.ts", "*.tsx", "*.js", ".jsx"]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": true,
+    "indentStyle": "space",
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "asNeeded",
+      "jsxQuoteStyle": "single",
+      "lineWidth": 80,
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
+    },
+    "globals": ["APP_VERSION"],
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "a11y": {
+        "noLabelWithoutControl": "off",
+        "noSvgWithoutTitle": "off",
+        "useAltText": "off",
+        "useKeyWithClickEvents": "off",
+        "useSemanticElements": "off",
+        "useValidAnchor": "off",
+        "useValidAriaRole": "off",
+        "useValidAriaValues": "off"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": {
+          "level": "warn",
+          "options": {
+            "maxAllowedComplexity": 26
+          }
+        },
+        "noUselessSwitchCase": "error",
+        "noVoid": "error",
+        "useLiteralKeys": "error",
+        "useSimplifiedLogicExpression": "error"
+      },
+      "correctness": {
+        "noNewSymbol": "error",
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error",
+        "useHookAtTopLevel": "error"
+      },
+      "nursery": {
+        "all": true,
+        "noEnum": "off",
+        "noExportedImports": "off",
+        "noNestedTernary": "off",
+        "noRestrictedImports": {
+          "level": "error",
+          "options": {
+            "paths": {
+              "@growthbook/growthbook-react/useFeatureValue": "Use @/hooks/useFeatureValue instead"
+            }
+          }
+        },
+        "noSecrets": "off",
+        "useComponentExportOnlyModules": "off",
+        "useExplicitFunctionReturnType": "off",
+        "useSortedClasses": {
+          "level": "error",
+          "options": {
+            "functions": ["cva"]
+          }
+        }
+      },
+      "recommended": true,
+      "style": {
+        "noDefaultExport": "off",
+        "noImplicitBoolean": "error",
+        "noNamespace": "error",
+        "noNegationElse": "error",
+        "noNonNullAssertion": "error",
+        "noShoutyConstants": "error",
+        "useCollapsedElseIf": "error",
+        "useFragmentSyntax": "error",
+        "useShorthandArrayType": "error",
+        "useShorthandAssign": "error"
+      },
+      "suspicious": {
+        "noApproximativeNumericConstant": "error",
+        "noConsole": "off",
+        "noControlCharactersInRegex": "error",
+        "noExplicitAny": "off",
+        "noMisrefactoredShorthandAssign": "error"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "include": ["src/pages/**/*"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": {
+              "level": "error",
+              "options": {
+                "filenameCases": ["export"],
+                "requireAscii": true,
+                "strictCase": true
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "include": ["src/tests/**/*"],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "useImportRestrictions": "off"
+          }
+        }
+      }
+    }
+  ]
+}
