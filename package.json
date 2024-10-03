@@ -1,0 +1,21 @@
+{
+  "name": "agent-clone-ts-langgraph",
+  "module": "src",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/main.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.6",
+    "@langchain/langgraph": "^0.2.10",
+    "elysia": "^1.1.17",
+    "paymanai": "^1.0.0",
+    "uuid": "^10.0.0"
+  }
+}
