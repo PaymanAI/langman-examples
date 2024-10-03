@@ -3,7 +3,7 @@
   "module": "src",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/main.ts",
+    "dev": "bun --watch src/main.ts",
     "lint": "biome check .",
     "lint:fix": "biome check --fix ."
   },
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@langchain/core": "^0.3.6",
-    "@langchain/langgraph": "^0.2.10",
+    "@langchain/langgraph": "^0.2.11",
     "elysia": "^1.1.17",
     "paymanai": "^1.0.0",
     "uuid": "^10.0.0"

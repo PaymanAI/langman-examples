@@ -3,7 +3,7 @@ import { Annotation } from '@langchain/langgraph'
 
 const CloneGraphState = Annotation.Root({
   messages: Annotation<BaseMessage[]>({
-    reducer: (x, y) => x.concat(y),
+    reducer: (x, y): BaseMessage[] => x.concat(y),
   }),
 })
 
