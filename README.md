@@ -1,6 +1,6 @@
 # LangMan Simple (Payman + Langgraph AI Agent)
 
-LangMan Simple is an AI agent that demonstrates how an AI can interact with and pay humans to complete tasks. It combines the power of Langgraph for workflow management and Payman for handling payments and task creation.
+LangMan Simple is an AI agent that demonstrates how an AI can interact with and pay humans to complete tasks. It combines the power of Langgraph for abstracting workflows as programmatic AI Agents and Payman for handling payments and task creation.
 
 ## Features
 
