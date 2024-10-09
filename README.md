@@ -55,6 +55,32 @@ To use Payman:
 4. Generate an API key
 5. Add the API key to your `.env` file
 
+## Quick Start
+
+To quickly get started and create your first task:
+
+1. Start the development server:
+   
+```
+bun dev
+```
+
+2. In a new terminal window, use curl to initiate a new conversation and create a task:
+   
+```
+curl -X POST http://localhost:3000/start
+```
+
+This will start a new conversation thread and instruct the AI to create a task using the Payman API. The response will include a `thread_id` which you can use for further interactions.
+
+3. (Optional) To continue the conversation or check the status, use:
+   
+```
+curl -X GET http://localhost:3000/message/{thread_id}
+```
+
+Replace `{thread_id}` with the ID received from the previous step.
+
 ## Usage
 
 To run the project in development mode:
