@@ -25,12 +25,20 @@ You'll also need:
 ## Installation
 
 1. Clone the repository:
-   `git clone https://github.com/yourusername/langman-simple.git`
 
-`cd langman-simple`
-Copy 2. Install dependencies:
+```
+git clone https://github.com/PaymanAI/langman-simple.git
+```
 
-`bun install`
+```
+cd langman-simple
+```
+ 
+ 2. Install dependencies:
+
+```
+bun install
+```
 
 3. Set up environment variables:
 
@@ -51,7 +59,9 @@ To use Payman:
 
 To run the project in development mode:
 
-`bun dev`
+```
+bun dev
+```
 
 The server will start, and you can interact with the AI agent through the defined endpoints.
 
@@ -66,7 +76,7 @@ The server will start, and you can interact with the AI agent through the define
 - `server.ts`: Main server file with API endpoints
 - `graph.ts`: Defines the Langgraph workflow
 - `tools.ts`: Contains the Payman task creation tool
-- `model.ts`: Configures the language model (not shown in the provided code)
+- `model.ts`: Configures the language model (currently using OpenAI, feel free to use others like Anthropics, etc.)
 
 ## Contributing
 
