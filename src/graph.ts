@@ -2,7 +2,7 @@ import { StateGraph } from "@langchain/langgraph";
 import StateAnnotation from "./state";
 import { model } from "./model";
 import { MemorySaver } from "@langchain/langgraph";
-import { AIMessage, HumanMessage } from "@langchain/core/messages";
+import { AIMessage } from "@langchain/core/messages";
 import { createTaskTool } from "./tools";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
 
@@ -24,10 +24,10 @@ function checkToolCall(state: typeof StateAnnotation.State) {
   const lastMessage = messages[messages.length - 1] as AIMessage;
   // If the LLM makes a tool call, then we route to the "tools" node
   if (lastMessage.tool_calls?.length) {
-    return "tools"; // Return an object with the next node
+    return "tools";
   }
   // Otherwise, we stop (reply to the user)
-  return "__end__"; // Return an object with the next node
+  return "__end__";
 }
 
 const workflow = new StateGraph(StateAnnotation)

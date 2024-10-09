@@ -1,7 +1,6 @@
 import { Elysia, t } from "elysia";
 import { v4 as uuidv4 } from "uuid";
 import { app, graph } from "./graph";
-import { model } from "./model";
 import { HumanMessage } from "@langchain/core/messages";
 
 export const server = new Elysia()

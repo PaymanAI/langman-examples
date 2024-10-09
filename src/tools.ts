@@ -20,7 +20,7 @@ export const createTaskTool = tool(
 
     try {
       // Choose between sandbox or live environment based on environment variable
-      const apiUrl = "https://agent-sandbox.payman.ai/api/tasks";
+      const apiUrl: any = process.env.PAYMAN_DEV_API;
 
       // Make the API request
       const response = await axios.post(apiUrl, payload, { headers });
