@@ -14,8 +14,6 @@ LangMan-Simple is an AI agent that demonstrates how an AI can interact with and 
 Before you begin, ensure you have the following installed:
 
 - [Bun](https://bun.sh/) - Fast all-in-one JavaScript runtime
-- [Node.js](https://nodejs.org/) (v14 or later)
-- [npm](https://www.npmjs.com/) (usually comes with Node.js)
 
 You'll also need:
 
