@@ -24,8 +24,6 @@ The `LangMan Examples` repository provides multiple examples to help developers 
 Before using any of the examples, ensure you have the following installed:
 
 - [Bun](https://bun.sh/) - Fast all-in-one JavaScript runtime
-- [Node.js](https://nodejs.org/) (v14 or later)
-- [npm](https://www.npmjs.com/) (usually comes with Node.js)
 
 Additionally, you'll need:
 
