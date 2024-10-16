@@ -6,8 +6,6 @@ import { AIMessage } from "@langchain/core/messages";
 import { createTaskTool } from "./tools";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
 
-export const graph = new StateGraph(StateAnnotation).compile();
-
 const tools = [createTaskTool];
 const toolNodeForGraph = new ToolNode(tools);
 

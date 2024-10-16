@@ -13,6 +13,7 @@ export const server = new Elysia()
             "Get Tyllen (tyllen@paymanai.com) to plan an event for me. It's for 50 people and I want it to be a surprise party. I want it to be at a restaurant and I want to spend $50. I want it to be on a Saturday night. Make a made up itenerary for him and have him do it for us. Go for it!"
           ),
         ],
+        waitingForWebhook: false,
       },
       { configurable: { thread_id } }
     );
@@ -36,6 +37,48 @@ export const server = new Elysia()
     {
       body: t.Object({
         message: t.String(),
+      }),
+    }
+  )
+  .post(
+    "/webhook",
+    async ({ body: { eventType, details } }) => {
+      console.log("Webhook received", eventType, details);
+
+      const thread_id = details.metadata.thread_id;
+      const config = { configurable: { thread_id } };
+      switch (eventType) {
+        case "submission.approved": {
+          let submissionText = details.submission_details.description;
+          await app.updateState(
+            config,
+            {
+              messages: [
+                new HumanMessage(
+                  `User let us know they completed the task, here is the response: ${submissionText}`
+                ),
+              ],
+              waitingForWebhook: false,
+            },
+
+            "waitForWebhook"
+          );
+
+          // Wait for the state to be updated before invoking
+          const result = await app.invoke(null, config);
+
+          console.log("Result from webhook:", result);
+          return {
+            state: result,
+            thread_id,
+          };
+        }
+      }
+    },
+    {
+      body: t.Object({
+        eventType: t.String(),
+        details: t.Any(),
       }),
     }
   )

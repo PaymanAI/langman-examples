@@ -1,0 +1,26 @@
+{
+  "name": "agent-clone-ts-langgraph",
+  "module": "src",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/main.ts",
+    "lint": "biome check .",
+    "lint:fix": "biome check --fix ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.9",
+    "@langchain/langgraph": "^0.2.14",
+    "@langchain/openai": "^0.3.6",
+    "axios": "^1.7.7",
+    "elysia": "^1.1.17",
+    "paymanai": "^1.0.0",
+    "uuid": "^10.0.0"
+  }
+}

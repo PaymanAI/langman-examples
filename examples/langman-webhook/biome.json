@@ -1,0 +1,66 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+  "files": {
+    "include": ["*.ts", "*.js"]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": true,
+    "indentStyle": "space",
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "asNeeded",
+      "jsxQuoteStyle": "single",
+      "lineWidth": 80,
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "complexity": {
+        "noExcessiveCognitiveComplexity": {
+          "level": "warn",
+          "options": {
+            "maxAllowedComplexity": 15
+          }
+        },
+        "noUselessSwitchCase": "error",
+        "noVoid": "error",
+        "useLiteralKeys": "error",
+        "useSimplifiedLogicExpression": "error"
+      },
+      "correctness": {
+        "noNewSymbol": "error",
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error",
+        "useHookAtTopLevel": "error"
+      },
+      "nursery": {
+        "all": true
+      },
+      "recommended": true,
+      "style": {
+        "noImplicitBoolean": "error",
+        "noNamespace": "error",
+        "noNegationElse": "error",
+        "noNonNullAssertion": "error",
+        "noShoutyConstants": "error",
+        "useCollapsedElseIf": "error",
+        "useShorthandArrayType": "error",
+        "useShorthandAssign": "error"
+      },
+      "suspicious": {
+        "noApproximativeNumericConstant": "error",
+        "noControlCharactersInRegex": "error",
+        "noMisrefactoredShorthandAssign": "error"
+      }
+    }
+  }
+}

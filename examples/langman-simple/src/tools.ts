@@ -31,7 +31,7 @@ export const createTaskTool = tool(
       // Type assertion for error
       // Handle errors (HTTP errors or general exceptions)
       if (error.response) {
-        return `HTTP Error: ${error.response.status} - ${error.response.data.message}`;
+        return `HTTP Error: ${error.response.status} - ${error.response.data.errorMessage}`;
       } else {
         return `Error: ${error.data}`;
       }
