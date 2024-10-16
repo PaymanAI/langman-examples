@@ -79,13 +79,7 @@ new HumanMessage(
 
 Replace `tyllen@paymanai.com` with your own email address. This ensures that you'll receive the task assignment.
 
-5. Save the `server.ts` file and restart your development server if it's already running:
-
-```
-bun dev
-```
-
-6. Use curl to initiate a new conversation and create a task:
+5. Use curl to initiate a new conversation and create a task:
 
 ```
 curl -X POST http://localhost:3000/start
@@ -93,17 +87,17 @@ curl -X POST http://localhost:3000/start
 
 This will start a new conversation thread and instruct the AI to create a task using the Payman API. The response will include a `thread_id` which you can use for further interactions.
 
-7. Check your email for the task assignment. Complete the task as requested on the Payman platform.
+6. Check your email for the task assignment. Complete the task as requested on the Payman platform.
 
-8. Once you've completed the task, the webhook will be triggered. You should see console output in your terminal where the server is running, showing the result of the webhook processing.
+7. Once you've completed the task, the webhook will be triggered. You should see console output in your terminal where the server is running, showing the result of the webhook processing.
 
-9. (Optional) To continue the conversation or check the status, use:
+8. (Optional) To continue the conversation or check the status, use:
 
 ```
 curl -X GET http://localhost:3000/message/{thread_id}
 ```
 
-Replace `{thread_id}` with the ID received from step 6.
+Replace `{thread_id}` with the ID received from step 5.
 
 This process allows you to test the full flow of task creation, assignment, completion, and webhook processing.
 
