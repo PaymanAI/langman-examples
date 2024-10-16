@@ -9,7 +9,7 @@ The `LangMan Examples` repository provides multiple examples to help developers 
 ## Examples
 
 - **[LangMan-Simple](examples/langman-simple/)**: Demonstrates a basic AI agent setup using LangGraph and Payman to automate task creation and payment processes.
-- **[LangMan-Webhook](examples/langman-webhook/)** (coming soon): Shows how to integrate webhooks for asynchronous updates and task verification.
+- **[LangMan-Webhook](examples/langman-webhook/)**: Shows how to integrate webhooks for asynchronous updates to the AI once human completes task and is paid.
 - _(More examples will be added in the future)_
 
 ## Features
